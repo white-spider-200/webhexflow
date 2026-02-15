@@ -1,47 +1,61 @@
-# WebHexFlow Documentation
+# Web Reconnaissance Tool Documentation
 
-## Project Overview
-WebHexFlow is a versatile tool designed for seamless data flow management in web applications. It provides an intuitive interface and robust features to enhance productivity and efficiency.
+## Overview
+This tool is designed for web reconnaissance, assisting users in gathering valuable information about target websites. It identifies potential vulnerabilities, gathers metadata, and facilitates a deeper understanding of web infrastructures.
 
 ## Features
-- **User-friendly interface**: Easy to navigate and use for all users.
-- **Real-time data processing**: Handle data in real time for faster response times.
-- **Customizable workflows**: Create tailored workflows to meet specific project needs.
+- Automated scanning of websites for vulnerabilities.
+- Collection of meta information (e.g., DNS records, server details).
+- Reporting tools to visualize findings.
+- Easy configuration and extensibility.
 
 ## Requirements
-- Node.js (version x.x or higher)
-- npm (version x.x or higher)
-- A modern web browser
+- Python 3.6 or higher.
+- Dependencies: `requests`, `beautifulsoup4`, `lxml`, `xmltodict`
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/white-spider-200/webhexflow.git
-   cd webhexflow
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the application:
-   ```bash
-   npm start
-   ```
+To install the tool, clone the repository and install required dependencies:
+```bash
+git clone https://github.com/white-spider-200/webhexflow.git
+cd webhexflow
+pip install -r requirements.txt
+```
 
 ## Usage Guide
-- Open your web browser and navigate to `http://localhost:3000` to access the application.
-- Follow the on-screen instructions to create and manage your workflows.
+Run the tool using the following command:
+```bash
+python main.py <target>
+```
+Replace `<target>` with the URL of the website you wish to scan.
 
 ## Project Structure
-- `src/`: Contains all source files.
-- `public/`: Static files such as HTML, CSS, and images.
-- `tests/`: Unit and integration tests.
+- `main.py`: The main execution file.
+- `scanner/`: Contains the scanning logic.
+- `report/`: Handles report generation.
+- `utils/`: Utility functions and classes.
+
+## Output Files
+The tool generates the following output files:
+- `report.json`: A detailed JSON report of the findings.
+- `report.md`: A Markdown file summarizing the key findings.
+
+## Configuration
+Configuration settings can be adjusted in the `config.yaml` file. Common settings include:
+- `scan_depth`: The depth of the scan.
+- `output_format`: Desired format of output files.
+
+## Development
+To contribute to the project, ensure you have a local development environment set up:
+- Create a new feature branch for your change:
+```bash
+git checkout -b feature/my-feature
+```
+- Implement your change and submit a pull request after testing.
 
 ## Troubleshooting
-- **Issue 1: Application not starting**
-   * Ensure all dependencies are installed.
-   * Check the terminal for error messages and resolve them accordingly.
+If you encounter issues, consider the following steps:
+- Verify your Python version and installed dependencies.
+- Review the output logs for any error messages.
 
-- **Issue 2: Workflow not executing**
-   * Verify your workflow configuration and input data.
-   * Consult the documentation for common issues and fixes.
+## Disclaimer
+This tool is intended for educational purposes only. Users are responsible for ensuring compliance with local laws and regulations regarding web scanning activities.
